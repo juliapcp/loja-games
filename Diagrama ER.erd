@@ -2,31 +2,31 @@
 <diagram version="1" name="Diagrama ER">
 	<entities>
 		<data-source id="mysql8-1800a61ae57-6fe6e18fc04a94cb">
-			<entity id="1" name="cliente" fq-name="loja.cliente">
+			<entity id="1" name="categoria" fq-name="loja.categoria">
 				<path name="loja"/>
 			</entity>
-			<entity id="2" name="compra" fq-name="loja.compra">
+			<entity id="2" name="categoriagame" fq-name="loja.categoriagame">
 				<path name="loja"/>
 			</entity>
-			<entity id="3" name="compraitem" fq-name="loja.compraitem">
+			<entity id="3" name="cliente" fq-name="loja.cliente">
 				<path name="loja"/>
 			</entity>
-			<entity id="4" name="produto" fq-name="loja.produto">
+			<entity id="4" name="compra" fq-name="loja.compra">
 				<path name="loja"/>
 			</entity>
-			<entity id="5" name="categoria" fq-name="loja.categoria">
+			<entity id="5" name="compraitem" fq-name="loja.compraitem">
 				<path name="loja"/>
 			</entity>
-			<entity id="6" name="categoriagame" fq-name="loja.categoriagame">
+			<entity id="6" name="produto" fq-name="loja.produto">
 				<path name="loja"/>
 			</entity>
 		</data-source>
 	</entities>
 	<relations>
-		<relation name="compra_FK" fq-name="loja.compra.compra_FK" type="fk" pk-ref="1" fk-ref="2"/>
-		<relation name="compraItem_FK" fq-name="loja.compraitem.compraItem_FK" type="fk" pk-ref="2" fk-ref="3"/>
-		<relation name="compraitem_FK1" fq-name="loja.compraitem.compraitem_FK1" type="fk" pk-ref="4" fk-ref="3"/>
-		<relation name="categoriaGame_FK" fq-name="loja.categoriagame.categoriaGame_FK" type="fk" pk-ref="4" fk-ref="6"/>
-		<relation name="categoriaGame_FK_1" fq-name="loja.categoriagame.categoriaGame_FK_1" type="fk" pk-ref="5" fk-ref="6"/>
+		<relation name="categoriagame_FK_1" fq-name="loja.categoriagame.categoriagame_FK_1" type="fk" pk-ref="1" fk-ref="2"/>
+		<relation name="compra_FK" fq-name="loja.compra.compra_FK" type="fk" pk-ref="3" fk-ref="4"/>
+		<relation name="compraItem_FK" fq-name="loja.compraitem.compraItem_FK" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="categoriagame_FK" fq-name="loja.categoriagame.categoriagame_FK" type="fk" pk-ref="6" fk-ref="2"/>
+		<relation name="compraitem_FK1" fq-name="loja.compraitem.compraitem_FK1" type="fk" pk-ref="6" fk-ref="5"/>
 	</relations>
 </diagram>

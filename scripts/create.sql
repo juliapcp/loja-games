@@ -1,3 +1,12 @@
+-- loja.categoria definition
+
+CREATE TABLE `categoria` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `descricao` varchar(100) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 -- loja.cliente definition
 
 CREATE TABLE `cliente` (
@@ -21,12 +30,17 @@ CREATE TABLE `produto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
--- loja.categoria definition
+-- loja.categoriagame definition
 
-CREATE TABLE `categoria` (
+CREATE TABLE `categoriagame` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `descricao` varchar(100) DEFAULT NULL,
-    PRIMARY KEY (`id`)
+    `idCategoria` int(11) NOT NULL,
+    `idGame` int(11) NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `categoriagame_un` (`idCategoria`,`idGame`),
+    KEY `categoriagame_FK` (`idGame`),
+    CONSTRAINT `categoriagame_FK` FOREIGN KEY (`idGame`) REFERENCES `produto` (`id`),
+    CONSTRAINT `categoriagame_FK_1` FOREIGN KEY (`idCategoria`) REFERENCES `categoria` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -46,26 +60,14 @@ CREATE TABLE `compra` (
 -- loja.compraitem definition
 
 CREATE TABLE `compraitem` (
-    `idItem` int(11) NOT NULL AUTO_INCREMENT,
+    `id` int(11) NOT NULL AUTO_INCREMENT,
     `idCompra` int(11) NOT NULL,
-    `idProduto` int(11) DEFAULT NULL,
+    `idProduto` int(11) NOT NULL,
     `valorUnitario` float DEFAULT NULL,
     `quantidade` float DEFAULT NULL,
-    PRIMARY KEY (`idItem`,`idCompra`),
+    PRIMARY KEY (`id`),
     KEY `compraItem_FK` (`idCompra`),
     KEY `compraitem_FK1` (`idProduto`),
     CONSTRAINT `compraItem_FK` FOREIGN KEY (`idCompra`) REFERENCES `compra` (`id`) ON DELETE CASCADE,
     CONSTRAINT `compraitem_FK1` FOREIGN KEY (`idProduto`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
--- loja.categoriagame definition
-
-CREATE TABLE `categoriagame` (
-    `idCategoria` int(11) NOT NULL,
-    `idGame` int(11) NOT NULL,
-    PRIMARY KEY (`idCategoria`,`idGame`),
-    KEY `categoriaGame_FK` (`idGame`),
-    CONSTRAINT `categoriaGame_FK` FOREIGN KEY (`idGame`) REFERENCES `produto` (`id`),
-    CONSTRAINT `categoriaGame_FK_1` FOREIGN KEY (`idCategoria`) REFERENCES `categoria` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
