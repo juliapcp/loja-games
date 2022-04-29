@@ -4,12 +4,13 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CompraItemModel extends Model
+class VendaModel extends Model
+
 {
 
-    protected $table = 'compraitem';
+    protected $table = 'venda';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['idCompra', 'idProduto', 'valorUnitario', 'quantidade'];
+    protected $allowedFields = ['idCliente', 'dataVenda', 'observacao'];
 
     public function getDados($id = null)
     {
@@ -19,17 +20,17 @@ class CompraItemModel extends Model
         return $this->asArray()->where(['id' => $id])->first();
     }
 
-    public function insereCompraItem($data)
+    public function insereVenda($data)
     {
         return $this->insert($data);
     }
 
-    public function alteraCompraItem($id, $data)
+    public function alteraVenda($id, $data)
     {
         return $this->update($id, $data);
     }
 
-    public function deletaCompraItem($id = null)
+    public function deletaVenda($id = null)
     {
         if ($id != null) {
             $this->delete($id);

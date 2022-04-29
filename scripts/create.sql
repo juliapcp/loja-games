@@ -44,30 +44,30 @@ CREATE TABLE `categoriagame` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
--- loja.compra definition
+-- loja.venda definition
 
-CREATE TABLE `compra` (
+CREATE TABLE `venda` (
     `idCliente` int(11) DEFAULT NULL,
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `dataCompra` datetime DEFAULT NULL,
+    `datavenda` datetime DEFAULT NULL,
     `observacao` varchar(100) DEFAULT NULL,
     PRIMARY KEY (`id`),
-    KEY `compra_FK` (`idCliente`),
-    CONSTRAINT `compra_FK` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)
+    KEY `venda_FK` (`idCliente`),
+    CONSTRAINT `venda_FK` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
--- loja.compraitem definition
+-- loja.vendaitem definition
 
-CREATE TABLE `compraitem` (
+CREATE TABLE `vendaitem` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `idCompra` int(11) NOT NULL,
+    `idvenda` int(11) NOT NULL,
     `idProduto` int(11) NOT NULL,
     `valorUnitario` float DEFAULT NULL,
     `quantidade` float DEFAULT NULL,
     PRIMARY KEY (`id`),
-    KEY `compraItem_FK` (`idCompra`),
-    KEY `compraitem_FK1` (`idProduto`),
-    CONSTRAINT `compraItem_FK` FOREIGN KEY (`idCompra`) REFERENCES `compra` (`id`) ON DELETE CASCADE,
-    CONSTRAINT `compraitem_FK1` FOREIGN KEY (`idProduto`) REFERENCES `produto` (`id`)
+    KEY `vendaItem_FK` (`idvenda`),
+    KEY `vendaitem_FK1` (`idProduto`),
+    CONSTRAINT `vendaItem_FK` FOREIGN KEY (`idvenda`) REFERENCES `venda` (`id`) ON DELETE CASCADE,
+    CONSTRAINT `vendaitem_FK1` FOREIGN KEY (`idProduto`) REFERENCES `produto` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -32,8 +32,22 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/produto/cadastro', 'Produto::mostraCadastro');
-$routes->post('/produto/cadastro', 'Produto::cadastra');
+
+$routes->get('/produtos/listagem', 'Produto::listagem');
+$routes->get('/produtos/cadastro', 'Produto::mostraCadastro');
+$routes->post('/produtos/cadastro', 'Produto::cadastra');
+
+$routes->get('/categorias/listagem', 'CategoriaProduto::listagem');
+$routes->get('/categorias/cadastro', 'CategoriaProduto::mostraCadastro');
+$routes->post('/categorias/cadastro', 'CategoriaProduto::cadastra');
+
+$routes->get('/vendas/listagem', 'Venda::listagem');
+$routes->get('/vendas/cadastro', 'Venda::mostraCadastro');
+$routes->post('/vendas/cadastro', 'Venda::cadastra');
+
+$routes->get('/clientes/listagem', 'Cliente::listagem');
+$routes->get('/clientes/cadastro', 'Cliente::mostraCadastro');
+$routes->post('/clientes/cadastro', 'Cliente::cadastra');
 
 /*
  * --------------------------------------------------------------------

@@ -6,9 +6,15 @@ use App\Models\ProdutoModel;
 
 class Produto extends BaseController
 {
+    public function listagem()
+    {
+        $produtoModel = new ProdutoModel();
+        $data['produtos'] = $produtoModel->getDados();
+        return view('produtos/listagem', $data);
+    }
     public function mostraCadastro()
     {
-        return view('cadastroProduto');
+        return view('produtos/cadastro');
     }
     public function cadastra(){
         $rules = [

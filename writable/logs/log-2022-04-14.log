@@ -1,0 +1,284 @@
+CRITICAL - 2022-04-14 12:07:06 --> Undefined variable $produtos
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Views\produtos\listagem.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\julia\\...', 17)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\View\View.php(210): include('C:\\Users\\julia\\...')
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Common.php(1089): CodeIgniter\View\View->render('produtos/listag...', Array, true)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(11): view('produtos/listag...')
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#6 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#7 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#10 {main}
+CRITICAL - 2022-04-14 12:07:07 --> Undefined variable $produtos
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Views\produtos\listagem.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\julia\\...', 17)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\View\View.php(210): include('C:\\Users\\julia\\...')
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Common.php(1089): CodeIgniter\View\View->render('produtos/listag...', Array, true)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(11): view('produtos/listag...')
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#6 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#7 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#10 {main}
+CRITICAL - 2022-04-14 12:07:44 --> Undefined variable $produtos
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Views\produtos\listagem.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\julia\\...', 17)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\View\View.php(210): include('C:\\Users\\julia\\...')
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Common.php(1089): CodeIgniter\View\View->render('produtos/listag...', Array, true)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(11): view('produtos/listag...')
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#6 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#7 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#10 {main}
+CRITICAL - 2022-04-14 12:11:37 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:11:37 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:11:38 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:11:38 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:01 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:02 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:03 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:16 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:17 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:17 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:18 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:19 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:29 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:29 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:30 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:30 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:30 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:12:36 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:07 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:07 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:12 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:13 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:13 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:14 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:15 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:15 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:16 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:16 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:16 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:20 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-14 12:14:24 --> Undefined property: App\Controllers\Produto::$session
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\Produto.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\julia\\...', 12)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\Produto->listagem()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}

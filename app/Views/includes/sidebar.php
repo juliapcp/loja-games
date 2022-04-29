@@ -8,10 +8,11 @@
         <nav id="menu">
             <ul>
                 <li><a href="/">Homepage</a></li>
-                <li><a href="/">Vendas</a></li>
-                <li><a href="/">Clientes</a></li>
-                <li><a href="/">Produtos</a></li>
-                <li><a href="/">Categorias de produto</a></li>
+                <li><a href="/vendas/listagem">Vendas</a></li>
+                <li><a href="/clientes/listagem">Clientes</a></li>
+                <li><a href="/produtos/listagem">Produtos</a></li>
+                <li><a href="/categorias/listagem">Categorias de produto</a></li>
+                <li><a href="/insights/listagem">Insights</a></li>
 
                 <!-- <li>
                     <span class="opener">Produtos</span>

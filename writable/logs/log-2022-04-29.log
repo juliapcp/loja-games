@@ -1,0 +1,53 @@
+CRITICAL - 2022-04-29 11:58:51 --> There is no data to insert.
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Models\CategoriaGameModel.php(24): CodeIgniter\Model->insert(Array)
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\CategoriaProduto.php(31): App\Models\CategoriaGameModel->insereCategoriaGame(Array)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\CategoriaProduto->cadastra()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriaProduto))
+#6 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#9 {main}
+CRITICAL - 2022-04-29 12:08:52 --> There is no data to insert.
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Models\CategoriaGameModel.php(24): CodeIgniter\Model->insert(Array)
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\CategoriaProduto.php(31): App\Models\CategoriaGameModel->insereCategoriaGame(Array)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\CategoriaProduto->cadastra()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriaProduto))
+#6 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#9 {main}
+CRITICAL - 2022-04-29 12:09:51 --> There is no data to insert.
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Models\CategoriaGameModel.php(24): CodeIgniter\Model->insert(Array)
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\CategoriaProduto.php(31): App\Models\CategoriaGameModel->insereCategoriaGame(Array)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\CategoriaProduto->cadastra()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriaProduto))
+#6 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#9 {main}
+CRITICAL - 2022-04-29 12:12:19 --> Call to undefined method App\Models\CategoriaModel::insereCategoriaGame
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\CategoriaProduto.php(31): CodeIgniter\Model->__call('insereCategoria...', Array)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\CategoriaProduto->cadastra()
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriaProduto))
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#6 {main}
+CRITICAL - 2022-04-29 12:14:07 --> Undefined variable $categoriasProduto
+#0 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Views\categoriaProduto\listagem.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\julia\\...', 13)
+#1 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\View\View.php(210): include('C:\\Users\\julia\\...')
+#2 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Common.php(1089): CodeIgniter\View\View->render('categoriaProdut...', Array, true)
+#4 C:\Users\julia\Documents\IFRS\DSI\loja-games\app\Controllers\CategoriaProduto.php(13): view('categoriaProdut...', Array)
+#5 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(832): App\Controllers\CategoriaProduto->listagem()
+#6 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoriaProduto))
+#7 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\julia\Documents\IFRS\DSI\loja-games\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\julia\Documents\IFRS\DSI\loja-games\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\julia\\...')
+#10 {main}

@@ -18,9 +18,10 @@ body {
 
 input, select, textarea {
 	outline: none;
+    text-transform: uppercase;
 }
 
-a {
+a,h3>b {
 	color: rgb(29, 98, 2);
 	text-decoration: none;
 }
@@ -502,17 +503,6 @@ table.alt tfoot {
     border-top: 0;
 }
 
-table tbody tr {
-    background-color: #e7e7e7;
-}
-
-    table tbody tr:nth-child(2n + 1) {
-        background-color: #fff;
-    }
-
-table th {
-    color: #4a4a4a;
-}
 
 ul.table-pagination {
     padding: 0;

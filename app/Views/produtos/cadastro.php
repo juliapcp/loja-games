@@ -1,5 +1,8 @@
-<form action="/produto/cadastro" method="post">
-    <table>
+<?php echo view('includes/head') ?>
+<h3 style="text-align: center;">Cadastrar novo <b>Produto</b>.</h3>
+
+<form action="/produtos/cadastro" method="post">
+    <table class="table table-borderless">
         <tr>
             <td colspan="3">
                 <label for="descricao">Descrição:</label>
@@ -8,7 +11,7 @@
         </tr>
         <tr>
             <td colspan="3">
-                <input type="text" name="descricao" size="100" required>
+                <input class="form-control" type="text" name="descricao" size="100" required>
             </td>
 
         </tr>
@@ -25,15 +28,17 @@
         </tr>
         <tr>
             <td>
-                <input type="text" name="tipo" required>
+                <input class="form-control" type="text" name="tipo" required>
             </td>
             <td>
-                <input type="number" step=0.01 name="valorBase" required>
+                <input class="form-control" type="number" step=0.01 name="valorBase" required>
             </td>
             <td>
-                <input type="number" step=0.01 name="quantidade" required>
+                <input class="form-control" type="number" step=0.01 name="quantidade" required>
             </td>
         </tr>
     </table>
     <button type="submit">Cadastrar</button>
 </form>
+<?php echo view('includes/sidebar') ?>
+<?php echo view('includes/footer') ?>
