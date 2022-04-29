@@ -36,6 +36,23 @@
             <td>
                 <input class="form-control" type="number" step=0.01 name="quantidade" required>
             </td>
+
+        </tr>
+        <tr>
+            <td colspan="3">
+                <label for="idCategorias">Categorias:</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <select class="multiselect" name="idCategorias[]" multiple="multiple" style="width: 100%;">
+                    <?php
+                    foreach ($categorias as $categoria) {
+                        echo '<option value="'.$categoria['id'].'">'.$categoria['descricao'].'</option>';
+                    }
+                    ?>
+                </select>
+            </td>
         </tr>
     </table>
     <button type="submit">Cadastrar</button>

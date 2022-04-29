@@ -11,9 +11,8 @@
 
     <title>Geekplace</title>
 
-
+    <link href="<?php echo base_url(); ?>/assets/css/select2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/vendor/bootstrap/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/fontawesome.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/templatemo-style.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/owl.css">

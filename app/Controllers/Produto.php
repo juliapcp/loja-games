@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CategoriaModel;
 use App\Models\ProdutoModel;
 
 class Produto extends BaseController
@@ -14,7 +15,9 @@ class Produto extends BaseController
     }
     public function mostraCadastro()
     {
-        return view('produtos/cadastro');
+        $categoriaModel = new CategoriaModel();
+        $data['categorias'] = $categoriaModel->getDados();
+        return view('produtos/cadastro', $data);
     }
     public function cadastra(){
         $rules = [

@@ -11,8 +11,12 @@
             <script src="<?php echo base_url(); ?>/assets/js/transition.js"></script>
             <script src="<?php echo base_url(); ?>/assets/js/owl-carousel.js"></script>
             <script src="<?php echo base_url(); ?>/assets/js/custom.js"></script>
-            </body>
-
+            <script src="<?php echo base_url(); ?>/assets/js/select2.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.multiselect').select2();
+                });
+            </script>
 
             </body>
 
