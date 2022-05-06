@@ -10,12 +10,16 @@ class VendaModel extends Model
 
     protected $table = 'venda';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['idCliente', 'dataVenda', 'observacao'];
+    protected $allowedFields = ['idCliente', 'dataCompra', 'observacao'];
 
     public function getDados($id = null)
     {
         if ($id == null) {
-            return $this->findAll();
+            $db      = \Config\Database::connect();
+            $builder = $db->table('venda');
+            $builder->select('*');
+            $builder->join('cliente', 'cliente.id = venda.idCliente');
+            return $builder->get()->getResult('array');
         }
         return $this->asArray()->where(['id' => $id])->first();
     }

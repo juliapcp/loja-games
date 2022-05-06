@@ -49,6 +49,9 @@ $routes->get('/clientes/listagem', 'Cliente::listagem');
 $routes->get('/clientes/cadastro', 'Cliente::mostraCadastro');
 $routes->post('/clientes/cadastro', 'Cliente::cadastra');
 
+$routes->get('/insights/listagem', 'Insights::listagem');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
