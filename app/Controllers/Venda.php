@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\ClienteModel;
 use App\Models\vendaModel;
 
 class Venda extends BaseController
@@ -14,28 +15,27 @@ class Venda extends BaseController
     }
     public function mostraCadastro()
     {
-        return view('vendas/cadastro');
+        $clienteModel = new ClienteModel();
+        $data['clientes'] = $clienteModel->getDados();
+        return view('vendas/cadastro', $data);
     }
     public function cadastra()
     {
         $rules = [
-            'descricao' => 'required|min_length[3]|max_length[100]',
-            'tipo' => 'required',
-            'valorBase' => 'required',
-            'quantidade' => 'required'
+            'dataCompra' => 'required',
+            'idCliente' => 'required',
         ];
 
         $vendaModel = new vendaModel();
 
         if ($this->validate($rules)) {
             $data = array(
-                'descricao' => $this->request->getVar('descricao'),
-                'tipo' => $this->request->getVar('tipo'),
-                'valorBase' => $this->request->getVar('valorBase'),
-                'quantidade' => $this->request->getVar('quantidade'),
+                'observacao' => $this->request->getVar('observacao'),
+                'dataCompra' => $this->request->getVar('dataCompra'),
+                'idCliente' => $this->request->getVar('idCliente')
             );
-            $vendaModel->inserevenda($data);
-            return redirect()->to(base_url(''));
+            $vendaModel->insereVenda($data);
+            return redirect()->to(base_url('/vendas/listagem'));
         }
     }
 }
