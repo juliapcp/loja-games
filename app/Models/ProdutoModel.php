@@ -57,4 +57,14 @@ class ProdutoModel extends Model
         $builder->limit(1);
         return $builder->get()->getResult('array');
     }
+
+    public function retiraQuantidadeVendida($id, $quantidade){
+        $data['quantidade'] = $this->getDados($id)['quantidade'] - $quantidade;
+        return $this->update($id, $data);
+    }
+    
+    public function recolocaQuantidadeVendida($id, $quantidade){
+        $data['quantidade'] = $this->getDados($id)['quantidade'] + $quantidade;
+        return $this->update($id, $data);
+    }
 }

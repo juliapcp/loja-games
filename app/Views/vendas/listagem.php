@@ -18,7 +18,11 @@
                 <td>" . $venda['nome'] . "</td>
                 <td>" . ($venda['dataCompra'] != null ? date_format(date_create($venda['dataCompra']), "d/m/Y") : "") . "</td>
                 <td>" . $venda['observacao'] . "</td>
-                <td></td>
+                <td>
+                <a href=\"/vendas/" . $venda['id'] . "\"> <i class=\"fa fa-eye\" title=\"Visualizar\"></i></a> 
+                <a href=\"/vendas/alterar/" . $venda['id'] . "\">  <i class=\"fa fa-pencil\" title=\"Editar\"></i></a> 
+                <a  href=\"/vendas/deletar/" . $venda['id'] . "\">  <i class=\"fa fa-close\" title=\"Deletar\"></i></a> 
+                </td>
                 </tr>";
         }
         ?>

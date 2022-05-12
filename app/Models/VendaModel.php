@@ -17,7 +17,7 @@ class VendaModel extends Model
         if ($id == null) {
             $db      = \Config\Database::connect();
             $builder = $db->table('venda');
-            $builder->select('*');
+            $builder->select('venda.id as id, nome, observacao, dataCompra');
             $builder->join('cliente', 'cliente.id = venda.idCliente');
             $builder->join('produto', 'produto.id = venda.idProduto');
             return $builder->get()->getResult('array');
@@ -40,6 +40,8 @@ class VendaModel extends Model
 
     public function insereVenda($data)
     {
+        $produtoModel = new ProdutoModel();
+        $produtoModel->retiraQuantidadeVendida($data['idProduto'], $data['quantidade']);
         return $this->insert($data);
     }
 
@@ -51,6 +53,10 @@ class VendaModel extends Model
     public function deletaVenda($id = null)
     {
         if ($id != null) {
+            $quantidade= $this->getDados($id)['quantidade'];
+            $idProduto= $this->getDados($id)['idProduto'];
+            $produtoModel = new ProdutoModel();
+            $produtoModel->recolocaQuantidadeVendida($idProduto, $quantidade);
             $this->delete($id);
         }
     }

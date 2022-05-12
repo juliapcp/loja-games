@@ -34,8 +34,37 @@
             <td>
                 <input class="form-control" type="date" name="dataCompra" required>
             </td>
-            <td>
+            <td colspan="2">
                 <input class="form-control" type="text" name="observacao">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="idProduto">Produto:</label>
+            </td>
+            <td>
+                <label for="quantidade">Quantidade:</label>
+            </td>
+            <td>
+                <label for="valorUnitario">Valor unitário (R$):</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select class="form-control" name="idProduto" required>
+                    <option value="" disabled selected>Selecionar produto</option>
+                    <?php
+                    foreach ($produtos as $produto) {
+                        echo '<option value="' . $produto['id'] . '">' . $produto['descricao'] . '</option>';
+                    }
+                    ?>
+                </select>
+            </td>
+            <td>
+                <input class="form-control" type="number" name="quantidade">
+            </td>
+            <td>
+                <input class="form-control" type="number" step=0.01 name="valorUnitario">
             </td>
         </tr>
     </table>
