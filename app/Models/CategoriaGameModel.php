@@ -19,6 +19,11 @@ class CategoriaGameModel extends Model
         return $this->asArray()->where(['id' => $id])->first();
     }
 
+    public function getProdutosComCategoria($idCategoria)
+    {
+        return $this->asArray()->where(['idCategoria' => $idCategoria])->first();
+    }
+    
     public function insereCategoriaGame($data)
     {
         return $this->insert($data);

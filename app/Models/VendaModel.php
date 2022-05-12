@@ -25,6 +25,19 @@ class VendaModel extends Model
         return $this->asArray()->where(['id' => $id])->first();
     }
 
+    public function getClienteMaiorGasto()
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('venda');
+        $builder->select('sum(VALORUNITARIO * quantidade)  as valorGasto');
+        $builder->select('nome');
+        $builder->join('cliente', 'cliente.id = venda.idCliente');
+        $builder->groupBy('idCliente');
+        $builder->orderBy('valorGasto desc');
+        $builder->limit(1);
+        return $builder->get()->getResult('array');
+    }
+
     public function insereVenda($data)
     {
         return $this->insert($data);

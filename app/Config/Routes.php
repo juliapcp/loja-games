@@ -40,6 +40,7 @@ $routes->post('/produtos/cadastro', 'Produto::cadastra');
 $routes->get('/categorias/listagem', 'CategoriaProduto::listagem');
 $routes->get('/categorias/cadastro', 'CategoriaProduto::mostraCadastro');
 $routes->post('/categorias/cadastro', 'CategoriaProduto::cadastra');
+$routes->get('/categorias/deletar/(:num)', 'CategoriaProduto::deleta/$1');
 
 $routes->get('/vendas/listagem', 'Venda::listagem');
 $routes->get('/vendas/cadastro', 'Venda::mostraCadastro');

@@ -14,7 +14,7 @@
                         foreach ($produtoMaisCaro as $produto) {
                             echo "<h3><b>" . $produto['descricao'] . "</b></h3>";
                             echo '<br>';
-                            echo "<h5>R$: " . $produto['valorbase'] . ",00</h5>";
+                            echo "<h5>R$: " .number_format($cliente['valorGasto'], 2, ',', '.') . ",00</h5>";
                         }
                     } else {
                         echo "<h3><b>-</b></h3>";
@@ -45,10 +45,11 @@
                     <h4>Cliente com maior valor pago</h4>
                     <?php
                     if (isset($clienteMaiorValorPago) && ($clienteMaiorValorPago !== null)) {
-                        foreach ($produtoMaiorQuantidade as $produto) {
-                            echo "<h3><b>" . $produto['descricao'] . "</b></h3>";
+                        foreach ($clienteMaiorValorPago as $cliente) {
+                            echo "<h3><b>" . $cliente['nome'] . "</b></h3>";
                             echo '<br>';
-                            echo "<h5>" . $produto['quantidade'] . " unidades</h5>";
+                            echo "<h5>R$: " .
+                            number_format($cliente['valorGasto'], 2, ',', '.') . "</h5>";
                         }
                     } else {
                         echo "<h3><b>-</b></h3>";
