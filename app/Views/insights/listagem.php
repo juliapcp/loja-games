@@ -10,11 +10,11 @@
                     <div class="icon"></div>
                     <h4>Produto mais caro</h4>
                     <?php
-                    if (isset($produtoMaiorQuantidade) && ($produtoMaiorQuantidade !== null)) {
+                    if (isset($produtoMaisCaro) && ($produtoMaisCaro !== null)) {
                         foreach ($produtoMaisCaro as $produto) {
                             echo "<h3><b>" . $produto['descricao'] . "</b></h3>";
                             echo '<br>';
-                            echo "<h5>R$: " .number_format($cliente['valorGasto'], 2, ',', '.') . ",00</h5>";
+                            echo "<h5>R$: " .number_format($produto['valorbase'], 2, ',', '.') . "</h5>";
                         }
                     } else {
                         echo "<h3><b>-</b></h3>";
@@ -29,9 +29,13 @@
                     <?php
                     if (isset($produtoMaiorQuantidade) && ($produtoMaiorQuantidade !== null)) {
                         foreach ($produtoMaiorQuantidade as $produto) {
-                            echo "<h3><b>" . $produto['descricao'] . "</b></h3>";
-                            echo '<br>';
-                            echo "<h5>" . $produto['quantidade'] . " unidades</h5>";
+                            if($produto['quantidade'] > 0){
+                                echo "<h3><b>" . $produto['descricao'] . "</b></h3>";
+                                echo '<br>';
+                                echo "<h5>" . $produto['quantidade'] . " unidades</h5>";
+                            } else {
+                                echo "<h3><b>-</b></h3>";
+                            }
                         }
                     } else {
                         echo "<h3><b>-</b></h3>";
