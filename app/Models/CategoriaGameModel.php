@@ -40,4 +40,11 @@ class CategoriaGameModel extends Model
             $this->delete($id);
         }
     }
+    public function deletaCategoriaGamePeloGame($idGame = null)
+    {
+        if ($idGame != null) {
+            $this->where('idGame', $idGame)->delete();
+        }
+    }
+    
 }

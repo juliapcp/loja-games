@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ClienteModel;
+use App\Models\VendaModel;
 
 class Cliente extends BaseController
 {
@@ -33,7 +34,22 @@ class Cliente extends BaseController
                 'email' => $this->request->getVar('email')
             );
             $clienteModel->insereCliente($data);
-            return redirect()->to(base_url(''));
+            return redirect()->to(base_url('/clientes/listagem'));
+        }
+    }
+
+    public function deleta($id = null)
+    {
+        $vendaModel = new VendaModel();
+        $vendasUsandoCliente = $vendaModel->getVendasComCliente($id);
+        if ($vendasUsandoCliente == null) {
+            $cliente = new ClienteModel();
+            $cliente->deletaCliente($id);
+            return redirect()->to(base_url('/cliente/listagem'));
+        } else {
+            $data['mensagem'] = "O cliente não pode ser eliminado pois está em uso.";
+            $data['url'] = base_url('/cliente/listagem');
+            return view('mensagem', $data);
         }
     }
 }

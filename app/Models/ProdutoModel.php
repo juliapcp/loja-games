@@ -32,6 +32,8 @@ class ProdutoModel extends Model
     public function deletaProduto($id = null)
     {
         if ($id != null) {
+            $categoriaGame = new CategoriaGameModel();
+            $categoriaGame->deletaCategoriaGamePeloGame($id);
             $this->delete($id);
         }
     }

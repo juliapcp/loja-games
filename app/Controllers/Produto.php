@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\CategoriaGameModel;
 use App\Models\CategoriaModel;
 use App\Models\ProdutoModel;
+use App\Models\VendaModel;
 
 class Produto extends BaseController
 {
@@ -49,4 +50,19 @@ class Produto extends BaseController
             return redirect()->to(base_url('/produtos/listagem'));
         }
     }
+    public function deleta($id = null)
+    {
+        $vendaModel = new VendaModel();
+        $vendasUsandoProduto = $vendaModel->getVendasComProduto($id);
+        if ($vendasUsandoProduto == null) {
+            $Produto = new ProdutoModel();
+            $Produto->deletaProduto($id);
+            return redirect()->to(base_url('/produto/listagem'));
+        } else {
+            $data['mensagem'] = "O produto não pode ser eliminado pois está em uso.";
+            $data['url'] = base_url('/produto/listagem');
+            return view('mensagem', $data);
+        }
+    }
+    
 }

@@ -19,8 +19,12 @@
                 <td>". $produto['descricao']."</td>
                 <td>". $produto['tipo']."</td>
                 <td>". $produto['valorBase']."</td>
-                <td>". $produto['quantidade']."</td>
-                <td></td>
+                <td>". $produto['quantidade']. "</td>
+                <td>
+                <a href=\"/produtos/" . $produto['id'] . "\"> <i class=\"fa fa-eye\" title=\"Visualizar\"></i></a> 
+                <a href=\"/produtos/alterar/" . $produto['id'] . "\">  <i class=\"fa fa-pencil\" title=\"Editar\"></i></a> 
+                <a  href=\"/produtos/deletar/" . $produto['id'] . "\">  <i class=\"fa fa-close\" title=\"Deletar\"></i></a> 
+                </td>
                 </tr>";
             }
         ?>

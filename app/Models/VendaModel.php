@@ -54,4 +54,12 @@ class VendaModel extends Model
             $this->delete($id);
         }
     }
+
+    public function getVendasComCliente($idCliente){
+        return $this->asArray()->where(['idCliente' => $idCliente])->first();
+    }
+
+    public function getVendasComProduto($idProduto){
+        return $this->asArray()->where(['idProduto' => $idProduto])->first();
+    }
 }

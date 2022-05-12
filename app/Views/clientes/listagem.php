@@ -17,8 +17,12 @@
                 echo "<tr><td></td>
                 <td>". $cliente['nome']."</td>
                 <td>". $cliente['celular']."</td>
-                <td>". $cliente['email']."</td>
-                <td></td>
+                <td>". $cliente['email']. "</td>
+                <td>
+                <a href=\"/clientes/" . $cliente['id'] . "\"> <i class=\"fa fa-eye\" title=\"Visualizar\"></i></a> 
+                <a href=\"/clientes/alterar/" . $cliente['id'] . "\">  <i class=\"fa fa-pencil\" title=\"Editar\"></i></a> 
+                <a  href=\"/clientes/deletar/" . $cliente['id'] . "\">  <i class=\"fa fa-close\" title=\"Deletar\"></i></a> 
+                </td>
                 </tr>";
             }
         ?>

@@ -36,6 +36,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/produtos/listagem', 'Produto::listagem');
 $routes->get('/produtos/cadastro', 'Produto::mostraCadastro');
 $routes->post('/produtos/cadastro', 'Produto::cadastra');
+$routes->get('/produtos/deletar/(:num)', 'Produto::deleta/$1');
 
 $routes->get('/categorias/listagem', 'CategoriaProduto::listagem');
 $routes->get('/categorias/cadastro', 'CategoriaProduto::mostraCadastro');
@@ -45,10 +46,13 @@ $routes->get('/categorias/deletar/(:num)', 'CategoriaProduto::deleta/$1');
 $routes->get('/vendas/listagem', 'Venda::listagem');
 $routes->get('/vendas/cadastro', 'Venda::mostraCadastro');
 $routes->post('/vendas/cadastro', 'Venda::cadastra');
+$routes->get('/vendas/deletar/(:num)', 'Venda::deleta/$1');
 
 $routes->get('/clientes/listagem', 'Cliente::listagem');
 $routes->get('/clientes/cadastro', 'Cliente::mostraCadastro');
 $routes->post('/clientes/cadastro', 'Cliente::cadastra');
+$routes->get('/clientes/deletar/(:num)', 'Cliente::deleta/$1');
+
 
 $routes->get('/insights/listagem', 'Insights::listagem');
 
