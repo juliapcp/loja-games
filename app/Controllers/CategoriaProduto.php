@@ -43,6 +43,10 @@ class CategoriaProduto extends BaseController
             $categoria = new CategoriaModel();
             $categoria->deletaCategoria($id);
             return redirect()->to(base_url('/categoriaProduto/listagem'));
+        } else {
+            $data['mensagem'] = "A categoria não pode ser eliminada pois está em uso.";
+            $data['url'] = base_url('/categoriaProduto/listagem');
+            return view('mensagem', $data);
         }
     }
 }
