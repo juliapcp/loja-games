@@ -23,6 +23,15 @@ class CategoriaGameModel extends Model
     {
         return $this->asArray()->where(['idCategoria' => $idCategoria])->first();
     }
+
+    public function getCategoriasComProduto($idProduto)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('categoriagame');
+        $builder->select('idCategoria, idGame');
+        $builder->where(['idGame' => $idProduto]);
+        return $builder->get()->getResult('array');
+    }
     
     public function insereCategoriaGame($data)
     {

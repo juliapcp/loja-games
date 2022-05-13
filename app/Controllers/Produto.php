@@ -19,7 +19,39 @@ class Produto extends BaseController
     {
         $categoriaModel = new CategoriaModel();
         $data['categorias'] = $categoriaModel->getDados();
+        $data['operacao'] = 'cadastro';
         return view('produtos/cadastro', $data);
+    }
+
+    public function mostraAlteracao($id = null)
+    {
+        if ($id != null) {
+            $categoriaModel = new CategoriaModel();
+            $produtoModel = new ProdutoModel();
+            $categoriaProdutoModel = new CategoriaGameModel();
+            $data['categorias'] = $categoriaModel->getDados();
+            $data['produto'] = $produtoModel->getDados($id);
+            $data['categoriasSelecionadas'] = $categoriaProdutoModel->getCategoriasComProduto($id);
+            $data['operacao'] = 'alteracao';
+            return view('produtos/cadastro', $data);
+        } else {
+            return redirect()->to(base_url('/produtos/listagem'));
+        }
+    }
+
+    public function mostraExibicao($id = null)
+    {
+        if ($id != null) {
+            $categoriaModel = new CategoriaModel();
+            $produtoModel = new ProdutoModel();
+            $categoriaProdutoModel = new CategoriaGameModel();
+            $data['categorias'] = $categoriaModel->getDados();
+            $data['produto'] = $produtoModel->getDados($id);
+            $data['categoriasSelecionadas'] = $categoriaProdutoModel->getCategoriasComProduto($id);
+            return view('produtos/exibir', $data);
+        } else {
+            return redirect()->to(base_url('/produtos/listagem'));
+        }
     }
     public function cadastra()
     {
@@ -42,10 +74,47 @@ class Produto extends BaseController
             $id = $produtoModel->insereProduto($data);
             $categoriaProdutoModel = new CategoriaGameModel();
 
-            foreach ($this->request->getVar('idCategorias') as $categoriaProduto) {
-                $data = array('idCategoria' => $categoriaProduto, 
-                            'idGame'=> $id);
-                $categoriaProdutoModel->insereCategoriaGame($data);
+            if ($this->request->getVar('idCategorias') != null) {
+                foreach ($this->request->getVar('idCategorias') as $categoriaProduto) {
+                    $data = array(
+                        'idCategoria' => $categoriaProduto,
+                        'idGame' => $id
+                    );
+                    $categoriaProdutoModel->insereCategoriaGame($data);
+                }
+            }
+            return redirect()->to(base_url('/produtos/listagem'));
+        }
+    }
+    public function altera($id)
+    {
+        $rules = [
+            'descricao' => 'required|max_length[100]',
+            'tipo' => 'required',
+            'valorBase' => 'required',
+            'quantidade' => 'required'
+        ];
+
+        $produtoModel = new ProdutoModel();
+
+        if ($this->validate($rules)) {
+            $data = array(
+                'descricao' => $this->request->getVar('descricao'),
+                'tipo' => $this->request->getVar('tipo'),
+                'valorBase' => $this->request->getVar('valorBase'),
+                'quantidade' => $this->request->getVar('quantidade')
+            );
+            $produtoModel->alteraProduto($id, $data);
+            $categoriaProdutoModel = new CategoriaGameModel();
+            $categoriaProdutoModel->deletaCategoriaGamePeloGame($id);
+            if ($this->request->getVar('idCategorias') != null) {
+                foreach ($this->request->getVar('idCategorias') as $categoriaProduto) {
+                    $data = array(
+                        'idCategoria' => $categoriaProduto,
+                        'idGame' => $id
+                    );
+                    $categoriaProdutoModel->insereCategoriaGame($data);
+                }
             }
             return redirect()->to(base_url('/produtos/listagem'));
         }
@@ -64,5 +133,4 @@ class Produto extends BaseController
             return view('mensagem', $data);
         }
     }
-    
 }

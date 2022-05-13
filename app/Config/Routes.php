@@ -37,6 +37,9 @@ $routes->get('/produtos/listagem', 'Produto::listagem');
 $routes->get('/produtos/cadastro', 'Produto::mostraCadastro');
 $routes->post('/produtos/cadastro', 'Produto::cadastra');
 $routes->get('/produtos/deletar/(:num)', 'Produto::deleta/$1');
+$routes->get('/produtos/alterar/(:num)', 'Produto::mostraAlteracao/$1');
+$routes->post('/produtos/alterar/(:num)', 'Produto::altera/$1');
+$routes->get('/produtos/(:num)', 'Produto::mostraExibicao/$1');
 
 $routes->get('/categorias/listagem', 'CategoriaProduto::listagem');
 $routes->get('/categorias/cadastro', 'CategoriaProduto::mostraCadastro');
