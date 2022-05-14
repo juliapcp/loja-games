@@ -32,6 +32,15 @@ class CategoriaGameModel extends Model
         $builder->where(['idGame' => $idProduto]);
         return $builder->get()->getResult('array');
     }
+
+    public function getProdutosCategorias()
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('categoriagame');
+        $builder->select('descricao, idCategoria, idGame');
+        $builder->join('produto', 'produto.id = idGame');
+        return $builder->get()->getResult('array');
+    }
     
     public function insereCategoriaGame($data)
     {

@@ -11,7 +11,10 @@ class CategoriaProduto extends BaseController
     public function listagem()
     {
         $categoriaProdutoModel = new CategoriaModel();
+        $categoriaGameModel = new CategoriaGameModel();
         $data['categoriasProduto'] = $categoriaProdutoModel->getDados();
+        $data['games'] = $categoriaGameModel->getProdutosCategorias();
+
         return view('categoriaProduto/listagem', $data);
     }
     public function mostraCadastro()

@@ -9,6 +9,7 @@
             <th scope="col">Celular</th>
             <th scope="col">E-mail</th>
             <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +23,11 @@
                 <a href=\"/clientes/" . $cliente['id'] . "\"> <i class=\"fa fa-eye\" title=\"Visualizar\"></i></a> 
                 <a href=\"/clientes/alterar/" . $cliente['id'] . "\">  <i class=\"fa fa-pencil\" title=\"Editar\"></i></a> 
                 <a  href=\"/clientes/deletar/" . $cliente['id'] . "\">  <i class=\"fa fa-close\" title=\"Deletar\"></i></a> 
+                </td>
+                <td>
+                <a href=\"/clientes/ficha/".$cliente['id']."\">
+                    <button>Gerar ficha</button>
+                </a>
                 </td>
                 </tr>";
             }
