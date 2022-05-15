@@ -13,6 +13,7 @@
     </thead>
     <tbody>
         <?php
+        if ($vendas != null) {
         foreach ($vendas as $venda) {
             echo "<tr><td></td>
                 <td>" . $venda['nome'] . "</td>
@@ -25,6 +26,7 @@
                 </td>
                 </tr>";
         }
+    }
         ?>
     </tbody>
 </table>

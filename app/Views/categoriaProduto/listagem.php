@@ -12,17 +12,21 @@
     </thead>
     <tbody>
         <?php
+        if ($categoriasProduto != null) {
         foreach ($categoriasProduto as $categoriaProduto) {
             echo "<tr><td></td>
                 <td>" . $categoriaProduto['descricao'] . "</td>
                 <td>";
         ?>
             <?php
+        if ($games != null) {
+            
             foreach ($games as $game) {
                 if($game['idCategoria'] == $categoriaProduto['id']){
                     echo "<a href=\"/produtos/". $game['idGame']."\"><span class=\"tag tag-firebase tag-lg\">".$game['descricao']."</span></a>";
                 }
             }
+        }
             ?>
         <?php
             echo "</td>
@@ -33,6 +37,7 @@
                 </td>
                 </tr>";
         }
+    }
         ?>
     </tbody>
 </table>

@@ -20,6 +20,7 @@ class Venda extends BaseController
         $data['clientes'] = $clienteModel->getDados();
         $produtoModel = new ProdutoModel();
         $data['produtos'] = $produtoModel->getDados();
+        $data['operacao'] = 'cadastro';
         return view('vendas/cadastro', $data);
     }
     public function cadastra()

@@ -32,6 +32,7 @@ if ($vendas != null) {
                 <th scope="col">Produto</th>
                 <th scope="col">Quantidade</th>
                 <th scope="col">Valor Unitário (R$)</th>
+                <th scope="col">Valor Total (R$)</th>
             </tr>
         </thead>
         <tbody>
@@ -40,22 +41,22 @@ if ($vendas != null) {
         $totalValor = 0;
         foreach ($vendas as $venda) {
             $totalQuantidade +=  $venda['QUANTIDADE'];
-            $totalValor +=  $venda['VALORUNITARIO'];
+            $totalValor +=  $venda['VALORUNITARIO'] * $venda['QUANTIDADE'];
             echo "<tr>
                 <td>" . ($venda['DATACOMPRA'] != null ? date_format(date_create($venda['DATACOMPRA']), "d/m/Y") : "") . "</td>
                 <td>" . $venda['OBSERVACAO'] . "</td>
                 <td>" . $venda['DESCRICAO'] . "</td>
                 <td>" . $venda['QUANTIDADE'] . "</td>
                 <td>" . $venda['VALORUNITARIO'] . "</td>
+                <td>" . $venda['VALORUNITARIO'] * $venda['QUANTIDADE'] . "</td>
                 </tr>";
         }
         echo "<tr class=\"table-success\"><td></td><td></td><td><b>Totais:</b></td>
         <td><b>" . $totalQuantidade . "</b></td>
+        <td></td>
         <td><b>" . $totalValor . "</b></td>
         </tr>";
-        echo "<tr class=\"table-success\"><td></td><td></td><td></td><td><b>Total gasto (R$):</b></td>
-        <td><b>" . $totalQuantidade * $totalValor . "</b></td>
-        </tr>";
+        
     } else {
         echo "<h4 style=\"text-align: center\">Ainda não têm compras por aqui.</h4>";
     }

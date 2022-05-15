@@ -1,7 +1,7 @@
 <?php echo view('includes/head') ?>
 <h3 style="text-align: center;"> <?php echo $operacao == 'alteracao' ? "Alterar" : "Cadastrar nova" ?> <b>Venda</b>.</h3>
 
-<form action="<?php echo $operacao == 'alteracao' ? '' : 'vendas/cadastro' ?>" method="POST">
+<form action="<?php echo $operacao == 'alteracao' ? '' : '/vendas/cadastro' ?>" method="POST">
     <table class="table table-borderless">
         <tr>
             <td colspan="3">

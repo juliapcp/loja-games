@@ -15,7 +15,8 @@ class Cliente extends BaseController
     }
     public function mostraCadastro()
     {
-        return view('clientes/cadastro');
+        $data['operacao'] = 'cadastro';
+        return view('clientes/cadastro', $data);
     }
 
     public function mostraAlteracao($id = null)

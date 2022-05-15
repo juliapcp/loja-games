@@ -6,18 +6,25 @@ use App\Models\CategoriaGameModel;
 use App\Models\CategoriaModel;
 use App\Models\ProdutoModel;
 use App\Models\VendaModel;
+use phpDocumentor\Reflection\DocBlock\Tags\Var_;
 
 class Produto extends BaseController
 {
     public function listagem()
     {
+        $params   = $_SERVER['QUERY_STRING'];
         $produtoModel = new ProdutoModel();
-        $data['produtos'] = $produtoModel->getDados();
+        if($params == ""){
+            $data['produtos'] = $produtoModel->getDados();
+        } else {
+            $data['produtos'] = $produtoModel->getDadosPelaDescricao(substr($params, (strrpos($params, "=") + 1)));
+        }
         return view('produtos/listagem', $data);
     }
     public function mostraCadastro()
     {
         $categoriaModel = new CategoriaModel();
+        $data['operacao'] = 'cadastro';
         $data['categorias'] = $categoriaModel->getDados();
         $data['operacao'] = 'cadastro';
         return view('produtos/cadastro', $data);

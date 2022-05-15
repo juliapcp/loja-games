@@ -19,7 +19,8 @@ class CategoriaProduto extends BaseController
     }
     public function mostraCadastro()
     {
-        return view('categoriaProduto/cadastro');
+        $data['operacao'] = 'cadastro';
+        return view('categoriaProduto/cadastro', $data);
     }
 
     public function mostraAlteracao($id = null)

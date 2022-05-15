@@ -19,6 +19,17 @@ class ProdutoModel extends Model
         return $this->asArray()->where(['id' => $id])->first();
     }
 
+    public function getDadosPelaDescricao($descricao = null)
+    {
+        if($descricao != null){
+            $db      = \Config\Database::connect();
+            $builder = $db->table('produto');
+            $builder->select('*');
+            $builder->like('UPPER(descricao)', $descricao);
+            return $builder->get()->getResult('array');
+        }
+    }
+
     public function insereProduto($data)
     {
         return $this->insert($data);
@@ -53,7 +64,7 @@ class ProdutoModel extends Model
         $db      = \Config\Database::connect();
         $builder = $db->table('produto');
         $builder->select('descricao, quantidade');
-        $builder->orderBy('valorBase desc');
+        $builder->orderBy('quantidade desc');
         $builder->limit(1);
         return $builder->get()->getResult('array');
     }
