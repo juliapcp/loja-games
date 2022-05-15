@@ -21,6 +21,30 @@ class CategoriaProduto extends BaseController
     {
         return view('categoriaProduto/cadastro');
     }
+
+    public function mostraAlteracao($id = null)
+    {
+        if ($id != null) {
+            $categoriaModel = new CategoriaModel();
+            $data['categoria'] = $categoriaModel->getDados($id);
+            $data['operacao'] = 'alteracao';
+            return view('categoriaProduto/cadastro', $data);
+        } else {
+            return redirect()->to(base_url('/categoriaProduto/listagem'));
+        }
+    }
+
+    public function mostraExibicao($id = null)
+    {
+        if ($id != null) {
+            $categoriaModel = new CategoriaModel();
+            $data['categoria'] = $categoriaModel->getDados($id);
+            return view('categoriaProduto/exibir', $data);
+        } else {
+            return redirect()->to(base_url('/categoriaProduto/listagem'));
+        }
+    }
+
     public function cadastra()
     {
         $rules = [
@@ -50,6 +74,22 @@ class CategoriaProduto extends BaseController
             $data['mensagem'] = "A categoria não pode ser eliminada pois está em uso.";
             $data['url'] = base_url('/categoriaProduto/listagem');
             return view('mensagem', $data);
+        }
+    }
+    public function altera($id)
+    {
+        $rules = [
+            'descricao' => 'required|min_length[2]|max_length[100]',
+        ];
+
+        $categoriaModel = new CategoriaModel();
+
+        if ($this->validate($rules)) {
+            $data = array(
+                'descricao' => $this->request->getVar('descricao')
+            );
+            $categoriaModel->alteraCategoria($id, $data);
+            return redirect()->to(base_url('/categoriaProduto/listagem'));
         }
     }
 }
