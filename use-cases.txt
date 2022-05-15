@@ -10,7 +10,7 @@ Procurar itens por pedaço de nome.
 Procurar games por pedaço de nome.
 --Procurar quais games pertencem aquele videogame.
 --Quais são os games de uma determinada categoria?
-Procurar a lista de produtos por usuário e toda a sua ficha e calcular gasto total.
+--Procurar a lista de produtos por usuário e toda a sua ficha e calcular gasto total.
 --Procurar qual é o usuário que gastou mais?
 --Qual é o produto de maior quantidade
 --qual é o produto mais caro.
