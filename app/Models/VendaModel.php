@@ -47,7 +47,14 @@ class VendaModel extends Model
 
     public function alteraVenda($id, $data)
     {
-        return $this->update($id, $data);
+        if($id != null){
+            $quantidade = $this->getDados($id)['quantidade'];
+            $idProduto = $this->getDados($id)['idProduto'];
+            $produtoModel = new ProdutoModel();
+            $produtoModel->recolocaQuantidadeVendida($idProduto, $quantidade);
+            $produtoModel->retiraQuantidadeVendida($data['idProduto'], $data['quantidade']);
+            return $this->update($id, $data);
+        }
     }
 
     public function deletaVenda($id = null)

@@ -52,4 +52,57 @@ class Venda extends BaseController
             return redirect()->to(base_url('/vendas/listagem'));
         
     }
+
+    public function mostraAlteracao($id = null)
+    {
+        if ($id != null) {
+            $clienteModel = new ClienteModel();
+            $data['clientes'] = $clienteModel->getDados();
+            $produtoModel = new ProdutoModel();
+            $data['produtos'] = $produtoModel->getDados();
+            $vendaModel = new VendaModel();
+            $data['venda'] = $vendaModel->getDados($id);
+            $data['operacao'] = 'alteracao';
+            return view('vendas/cadastro', $data);
+        } else {
+            return redirect()->to(base_url('/vendas/listagem'));
+        }
+    }
+
+    public function mostraExibicao($id = null)
+    {
+        if ($id != null) {
+            $clienteModel = new ClienteModel();
+            $data['clientes'] = $clienteModel->getDados();
+            $produtoModel = new ProdutoModel();
+            $data['produtos'] = $produtoModel->getDados();
+            $vendaModel = new VendaModel();
+            $data['venda'] = $vendaModel->getDados($id);
+            return view('vendas/exibir', $data);
+        } else {
+            return redirect()->to(base_url('/vendas/listagem'));
+        }
+    }
+
+    public function altera($id)
+    {
+        $rules = [
+            'dataCompra' => 'required',
+            'idCliente' => 'required',
+        ];
+        $vendaModel = new VendaModel();
+
+        if ($this->validate($rules)) {
+            $data = array(
+                'observacao' => $this->request->getVar('observacao'),
+                'dataCompra' => $this->request->getVar('dataCompra'),
+                'idCliente' => $this->request->getVar('idCliente'),
+                'idProduto' => $this->request->getVar('idProduto'),
+                'valorUnitario' => $this->request->getVar('valorUnitario'),
+                'quantidade' => $this->request->getVar('quantidade')
+            );
+            $vendaModel->alteraVenda($id, $data);
+            return redirect()->to(base_url('/vendas/listagem'));
+        }
+    }
 }

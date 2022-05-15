@@ -1,7 +1,7 @@
 <?php echo view('includes/head') ?>
-<h3 style="text-align: center;">Cadastrar nova <b>Venda</b>.</h3>
+<h3 style="text-align: center;"> <?php echo $operacao == 'alteracao' ? "Alterar" : "Cadastrar nova" ?> <b>Venda</b>.</h3>
 
-<form action="/vendas/cadastro" method="post">
+<form action="<?php echo $operacao == 'alteracao' ? '' : 'vendas/cadastro' ?>" method="POST">
     <table class="table table-borderless">
         <tr>
             <td colspan="3">
@@ -11,7 +11,7 @@
         </tr>
         <tr>
             <td colspan="3">
-                <select class="form-control" name="idCliente" required style="width: 100%;">
+                <select class="form-control" name="idCliente" id="cliente" required style="width: 100%;">
                     <option value="" disabled selected>Selecionar cliente</option>
                     <?php
                     foreach ($clientes as $cliente) {
@@ -32,10 +32,10 @@
         </tr>
         <tr>
             <td>
-                <input class="form-control" type="date" name="dataCompra" required>
+                <input value="<?php echo $operacao == 'alteracao' ? $venda['dataCompra'] : "" ?>" class="form-control" type="date" name="dataCompra" required>
             </td>
             <td colspan="2">
-                <input class="form-control" type="text" name="observacao">
+                <input value="<?php echo $operacao == 'alteracao' ? $venda['observacao'] : "" ?>" class="form-control" type="text" name="observacao">
             </td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@
         </tr>
         <tr>
             <td>
-                <select class="form-control" name="idProduto" required>
+                <select id="produto" class="form-control" name="idProduto" required>
                     <option value="" disabled selected>Selecionar produto</option>
                     <?php
                     foreach ($produtos as $produto) {
@@ -61,14 +61,30 @@
                 </select>
             </td>
             <td>
-                <input class="form-control" type="number" name="quantidade">
+                <input value="<?php echo $operacao == 'alteracao' ? $venda['quantidade'] : "" ?>" class="form-control" type="number" name="quantidade">
             </td>
             <td>
-                <input class="form-control" type="number" step=0.01 name="valorUnitario">
+                <input value="<?php echo $operacao == 'alteracao' ? $venda['valorUnitario'] : "" ?>" class="form-control" type="number" step=0.01 name="valorUnitario">
             </td>
         </tr>
     </table>
-    <button type="submit">Cadastrar</button>
+    <button type="submit"><?php echo $operacao == 'alteracao' ? "Alterar" : "Cadastrar" ?></button>
 </form>
 <?php echo view('includes/sidebar') ?>
 <?php echo view('includes/footer') ?>
+<script>
+    $('#produto').val([
+        <?php
+        if ($operacao == 'alteracao') {
+                echo "'" . $venda['idProduto'] . "'";
+        }
+        ?>
+    ]);
+    $('#cliente').val([
+        <?php
+        if ($operacao == 'alteracao') {
+                echo "'" . $venda['idCliente'] . "'";
+        }
+        ?>
+    ]);
+</script>
