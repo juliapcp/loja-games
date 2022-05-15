@@ -83,6 +83,19 @@ class Cliente extends BaseController
         }
     }
 
+    public function mostraFicha($id = null)
+    {
+        if ($id != null) {
+            $clienteModel = new ClienteModel();
+            $data['cliente'] = $clienteModel->getDados($id);
+            $vendaModel = new VendaModel();
+            $data['vendas'] = $vendaModel->getVendasDoCliente($id);
+            return view('clientes/ficha', $data);
+        } else {
+            return redirect()->to(base_url('/clientes/listagem'));
+        }
+    }
+
     public function deleta($id = null)
     {
         $vendaModel = new VendaModel();

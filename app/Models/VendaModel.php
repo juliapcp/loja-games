@@ -57,6 +57,17 @@ class VendaModel extends Model
         }
     }
 
+    public function getVendasDoCliente($id = null)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('venda');
+        $builder->select('DATACOMPRA,OBSERVACAO,IDPRODUTO,VENDA.QUANTIDADE,VENDA.VALORUNITARIO,PRODUTO.DESCRICAO');
+        $builder->join('produto', 'produto.id = idproduto');
+        $builder->orderBy('datacompra asc');
+        $builder->where(['idCliente' => $id]);
+        return $builder->get()->getResult('array');
+    }
+
     public function deletaVenda($id = null)
     {
         if ($id != null) {

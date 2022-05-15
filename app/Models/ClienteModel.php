@@ -16,6 +16,8 @@ class ClienteModel extends Model {
         return $this->asArray()->where(['id' => $id])->first();
     }
 
+    
+
     public function insereCliente($data)
     {
         return $this->insert($data);

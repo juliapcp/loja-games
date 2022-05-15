@@ -63,6 +63,7 @@ $routes->post('/clientes/cadastro', 'Cliente::cadastra');
 $routes->get('/clientes/deletar/(:num)', 'Cliente::deleta/$1');
 $routes->get('/clientes/alterar/(:num)', 'Cliente::mostraAlteracao/$1');
 $routes->post('/clientes/alterar/(:num)', 'Cliente::altera/$1');
+$routes->get('/clientes/ficha/(:num)', 'Cliente::mostraFicha/$1');
 $routes->get('/clientes/(:num)', 'Cliente::mostraExibicao/$1');
 
 $routes->get('/insights/listagem', 'Insights::listagem');
